@@ -1,7 +1,11 @@
 package com.example.tictactoe;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, restart;
     String b1, b2, b3, b4, b5, b6, b7, b8, b9;
-    TextView player1, player2, pointx, pointo, winner;
+    TextView player1, player2, pointx, pointo;
     View row1, row2, row3, col1, col2, col3, cross1, cross2;
     int flag = 0;
     int count = 0;
@@ -40,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         restart = findViewById(R.id.restart_btn);
         pointx = findViewById(R.id.player1_point);
         pointo = findViewById(R.id.player2_point);
-        winner = findViewById(R.id.winner_text);
         row1 = findViewById(R.id.row1_win);
         row2 = findViewById(R.id.row2_win);
         row3 = findViewById(R.id.row3_win);
@@ -49,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
         col3 = findViewById(R.id.column3_win);
         cross1 = findViewById(R.id.cross1_win);
         cross2 = findViewById(R.id.cross2_win);
+//        btn1.setBackgroundResource(R.drawable.start_drawable_bg);
+//        btn2 = findViewById(R.id.button2);
+//        btn3 = findViewById(R.id.button3);
+//        btn4 = findViewById(R.id.button4);
+//        btn5 = findViewById(R.id.button5);
+//        btn6 = findViewById(R.id.button6);
+//        btn7 = findViewById(R.id.button7);
+//        btn8 = findViewById(R.id.button8);
+//        btn9 = findViewById(R.id.button9);
     }
 
     public void winningLogic(){
@@ -74,13 +86,23 @@ public class MainActivity extends AppCompatActivity {
             if (flag == 0) {
                 win_count_o++;
                 pointo.setText("Points : "+ win_count_o);
-                winner.setText("O Won");
+                dialogBox(MainActivity.this, "O Won");
+          //      winner.setText("O Won");
             } else if (flag == 1) {
                 win_count_x++;
                 pointx.setText("Points : "+ win_count_x);
-                winner.setText("X Won");
+                dialogBox(MainActivity.this, "X Won");
+         //       winner.setText("X Won");
             }
 //        }
+    }
+
+    public void dialogBox(Context context, String message){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Victory!!");
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+        builder.show();
     }
 
     public void playStart(View view) {
@@ -90,13 +112,14 @@ public class MainActivity extends AppCompatActivity {
             count++;
             if (flag == 0) {
                 btnCurrent.setText("X");
-                btnCurrent.setBackgroundResource(R.drawable.x_drawable_bg);
-                btnCurrent.setBackgroundColor(getResources().getColor(R.color.teal_200));
+                btnCurrent.setBackgroundColor(Color.CYAN);
+             //   btnCurrent.setBackgroundColor(getResources().getColor(R.color.teal_200));
                 flag = 1;
             } else {
                 btnCurrent.setText("O");
-                btnCurrent.setBackgroundResource(R.drawable.o_drawable_bg);
-                btnCurrent.setBackgroundColor(getResources().getColor(R.color.purple_300));
+                btnCurrent.setBackgroundColor(Color.YELLOW);
+             //   btnCurrent.setBackgroundResource(R.drawable.o_drawable_bg);
+             //   btnCurrent.setBackgroundColor(getResources().getColor(R.color.purple_300));
                 flag = 0;
             }
             if (count > 4) {
@@ -143,8 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     cross2.setVisibility(View.VISIBLE);
                     winningLogic();
                 } else if (count == 9) {
-                    winner.setVisibility(View.VISIBLE);
-                    winner.setText("Game is a Draw");
+                    dialogBox(MainActivity.this, "Match Is Drawn");
                 }
             }
         }
@@ -179,6 +201,13 @@ public class MainActivity extends AppCompatActivity {
         col3.setVisibility(View.INVISIBLE);
         cross1.setVisibility(View.INVISIBLE);
         cross2.setVisibility(View.INVISIBLE);
-        winner.setVisibility(View.INVISIBLE);
+        btn2.setClickable(true);
+        btn3.setClickable(true);
+        btn4.setClickable(true);
+        btn5.setClickable(true);
+        btn6.setClickable(true);
+        btn7.setClickable(true);
+        btn8.setClickable(true);
+        btn9.setClickable(true);
     }
 }

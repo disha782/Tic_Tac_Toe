@@ -26,9 +26,9 @@
             android:id="@+id/button1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/start_drawable_bg"
             android:onClick="playStart"
-            android:textSize="15dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200" />
 
         <Button
@@ -36,10 +36,10 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
-            app:backgroundTint="@color/purple_200"
-            android:onClick="playStart" />
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:onClick="playStart"
+            app:backgroundTint="@color/purple_200"  />
 
         <Button
             android:id="@+id/button3"
@@ -47,8 +47,8 @@
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -56,8 +56,8 @@
             android:id="@+id/button4"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -66,8 +66,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -77,8 +77,8 @@
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -86,8 +86,8 @@
             android:id="@+id/button7"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -96,8 +96,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -106,8 +106,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:background="@drawable/start_drawable_bg"
+            android:textSize="25dp"
+            android:textStyle="bold"
             app:backgroundTint="@color/purple_200"
             android:onClick="playStart" />
 
@@ -186,22 +186,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/player2"
         app:layout_constraintTop_toBottomOf="@+id/player2" />
-
-    <TextView
-        android:id="@+id/winner_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="50dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
 
     <View
         android:id="@+id/row2_win"
