@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 flag = 1;
             } else {
                 btnCurrent.setText("O");
-                btnCurrent.setBackgroundColor(Color.YELLOW);
+                btnCurrent.setBackgroundColor(Color.BLUE);
              //   btnCurrent.setBackgroundResource(R.drawable.o_drawable_bg);
              //   btnCurrent.setBackgroundColor(getResources().getColor(R.color.purple_300));
                 flag = 0;
@@ -201,13 +201,15 @@ public class MainActivity extends AppCompatActivity {
         col3.setVisibility(View.INVISIBLE);
         cross1.setVisibility(View.INVISIBLE);
         cross2.setVisibility(View.INVISIBLE);
-        btn2.setClickable(true);
-        btn3.setClickable(true);
-        btn4.setClickable(true);
-        btn5.setClickable(true);
-        btn6.setClickable(true);
-        btn7.setClickable(true);
-        btn8.setClickable(true);
-        btn9.setClickable(true);
+        btn1.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn2.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn3.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn4.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn5.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn6.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn7.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn8.setBackgroundColor(Color.rgb(206, 147, 216));
+        btn9.setBackgroundColor(Color.rgb(206, 147, 216));
+
     }
 }
